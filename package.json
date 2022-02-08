@@ -1,0 +1,21 @@
+{
+    "name": "devtool-data-converter",
+    "mastertemplate": "devtool-data-converter",
+    "version": "0.0.1",
+    "description": "Template project - Provided by AppSeed",
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/app-generator/devtool-data-converter"
+    },
+    "bugs": {
+        "url": "https://github.com/app-generator/devtool-data-converter/issues",
+        "email": "support@appseed.us"
+    },
+    "author": "AppSeed App Generator <support@appseed.us> (https://appseed.us)",
+    "engines": {
+        "node": ">=10.0.0"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}

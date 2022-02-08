@@ -1,0 +1,237 @@
+<!--
+
+=========================================================
+* Volt Free - Bootstrap 5 Dashboard
+=========================================================
+
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Copyright 2021 Themesberg (https://www.themesberg.com)
+
+* Designed and coded by https://themesberg.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal. Contact us if you want to remove it.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- Primary Meta Tags -->
+<title>
+    Data Tables Loader | AppSeed    
+</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="title" content="Volt - Free Bootstrap 5 Admin Dashboard">
+<meta name="author" content="Themesberg">
+<meta name="description" content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
+<meta name="keywords" content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, themesberg, themesberg dashboard, themesberg admin dashboard" />
+<link rel="canonical" href="https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://demo.themesberg.com/volt-pro">
+<meta property="og:title" content="Volt - Free Bootstrap 5 Admin Dashboard">
+<meta property="og:description" content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
+<meta property="og:image" content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-pro-bootstrap-5-dashboard/volt-pro-preview.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://demo.themesberg.com/volt-pro">
+<meta property="twitter:title" content="Volt - Free Bootstrap 5 Admin Dashboard">
+<meta property="twitter:description" content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
+<meta property="twitter:image" content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-pro-bootstrap-5-dashboard/volt-pro-preview.jpg">
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="120x120" href="/static/assets/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/assets/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/static/assets/img/favicon/site.webmanifest">
+<link rel="mask-icon" href="/static/assets/img/favicon/safari-pinned-tab.svg" color="#ffffff">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Sweet Alert -->
+<link type="text/css" href="/static/assets/vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+
+<!-- Notyf -->
+<link type="text/css" href="/static/assets/vendor/notyf/notyf.min.css" rel="stylesheet">
+
+<!-- Volt CSS -->
+<link type="text/css" href="/static/assets/css/volt.css" rel="stylesheet">
+
+<!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+
+</head>
+<body>
+
+    <header class="header-global">
+        <nav id="navbar-main" aria-label="Primary navigation" class="navbar navbar-main navbar-expand-lg navbar-theme-primary pt-4 navbar-dark">
+            <div class="container position-relative">
+                <div class="navbar-collapse collapse me-auto" id="navbar_global">
+                    <div class="navbar-collapse-header">
+                        <div class="row">
+                            <div class="col-6 collapse-brand">
+                                <a href="/">
+                                    <img src="/static/assets/img/brand/light.svg" alt="Volt logo">
+                                </a>
+                            </div>
+                            <div class="col-6 collapse-close">
+                                <a href="#navbar_global" class="fas fa-times" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" title="close" aria-label="Toggle navigation"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+                        <li class="nav-item me-2">
+                            <a href="{{ url_for('datatables') }}" class="nav-link">Data Tables</a>
+                        </li>
+                        <li class="nav-item">
+                            <a target="_bank" href="https://appseed.us/support" class="nav-link">Support</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex align-items-center ms-auto">
+                    <a href="https://github.com/app-generator/devtool-data-converter" 
+                       target="_blank" 
+                       class="btn btn-outline-white d-inline-flex align-items-center me-md-3">
+                        <svg class="icon icon-xxs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 9.5A3.5 3.5 0 005.5 13H9v2.586l-1.293-1.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 15.586V13h2.5a4.5 4.5 0 10-.616-8.958 4.002 4.002 0 10-7.753 1.977A3.5 3.5 0 002 9.5zm9 3.5H9V8a1 1 0 012 0v5z" clip-rule="evenodd"></path></svg>
+                        Download
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="section section-lg line-bottom-soft">
+            <div class="container">
+                <div class="row justify-content-center mb-5 mb-lg-6">
+                    <div class="col-12 text-center">
+                        <h2 class="h1 px-lg-5">What's inside?</h2>
+                        <p class="lead px-lg-8">
+                            <strong><a target="_blank" href="https://github.com/app-generator/flask-volt-datatables">Open-Source sample</a></strong>
+                            crafted with <strong>Flask</strong> and 
+                            <strong>Simple-Datatables JS Library</strong> that manages paginated data using different techniques. 
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-6">
+                        <ul>
+                            <li>
+                                <strong><a href="{{ url_for('datatables') }}">DataTables From File</a></strong> - The information is loaded a JSON file saved in "static/datatables" directory
+                            </li>
+                        </ul>
+                    </div>    
+                </div>    
+            </div>
+        </section>
+
+        <section class="section section-lg bg-gray-800">
+            <div class="container">
+                <div class="row justify-content-center text-center text-white mb-5">
+                    <div class="col-12">
+                        <h2 class="h1 fw-light mb-3">
+                            How to use the code
+                        </h2>
+                        <p class="lead px-lg-8">
+                            The complete usage information is provided by README file shipped with the source code. 
+                            <br />
+                            In case of any issues, feel free to contact .  
+                        </p>
+                    </div>
+                </div>
+                <div class="row justify-content-center mb-6">
+                    <div class="col-md-10 col-xl-9">
+                        <div class="position-relative">
+                            <div class="rounded bg-white p-4 text-dark mb-2">
+
+                                <div class="mb-3">
+                                    <div class="text-gray"># create a virtual environment</div>
+                                    <div class="fw-bold">&gt; $ virtualenv env </div>
+                                    <div class="fw-bold">&gt; $ source env/bin/activate </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <div class="text-gray"># Install Modules</div>
+                                    <div class="fw-bold">&gt; $ pip3 install -r requirements.txt </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <div class="text-gray"># Sert up Flask Environment</div>
+                                    <div class="fw-bold">&gt; $ export FLASK_APP=run.py</div>
+                                    <div class="fw-bold">&gt; $ export FLASK_ENV=development</div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <div class="text-gray"># Load sample data (media/data.csv)</div>
+                                    <div class="fw-bold">&gt; $ flask load_data </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <div class="text-gray"># Start the APP</div>
+                                    <div class="fw-bold">&gt; $ flask run </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <p class="mt-4 text-white text-center">
+                            Need help? Ask for <a target="_blank" class="text-white text-decoration-underline fw-bolder" href="https://appseed.us">support</a> via email and Discord.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-lg bg-white" id="pricing">
+            <div class="container">
+                <div class="mx-lg-2 row">
+                    <div class="text-center col-12">
+                       <h2 class="h5 text-gray fw-normal mb-4">Available in the following technologies:</h2>
+                       <div>
+                            <a class="me-3 card-link" href="https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard" target="_blank">
+                                <img src="/static/assets/img/technologies/bootstrap-5-logo.svg" class="image image-sm">
+                            </a>
+                            <a class="me-3 card-link" href="https://demo.themesberg.com/volt-react-dashboard/#/" target="_blank">
+                                <img src="/static/assets/img/technologies/react-logo.svg" class="image image-sm">
+                            </a>
+                            <a class="me-3 card-link" href="https://appseed.us/admin-dashboards/flask-dashboard-volt" target="_blank">
+                                <img src="/static/assets/img/technologies/flask-logo.svg" class="image image-sm">
+                            </a>
+                            <a class="me-3 card-link" href="https://appseed.us/admin-dashboards/django-dashboard-volt" target="_blank">
+                                <img src="/static/assets/img/technologies/django-logo.svg" class="image image-sm">
+                            </a>                             
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer py-6 bg-gray-800 text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col mb-md-0">
+                    <a href="https://themesberg.com" target="_blank" class="d-flex justify-content-center">
+                        <img src="/static/assets/img/themesberg-logo-alt.svg" height="35" class="mb-4" alt="Themesberg Logo">
+                    </a>
+                <div class="d-flex text-center justify-content-center align-items-center" role="contentinfo">
+                    <p class="fw-normal font-small mb-0">
+                        &copy; Themesberg 2019-<span class="current-year">2020</span> - coded by <a target="_blank" href="https://appseed.us">AppSeed</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    {% include 'includes/scripts.html' %}
+
+</body>
+</html>

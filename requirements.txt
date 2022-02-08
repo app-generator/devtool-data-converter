@@ -1,0 +1,6 @@
+flask==1.1.2
+jinja2==2.11.3
+python-dotenv==0.19.2
+python-decouple==3.5
+Faker==12.1.0
+pandas==1.4.0
