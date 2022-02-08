@@ -1,6 +1,6 @@
 # Data Converter 
 
-Open-Source that provides a simple API for data management.
+Open-Source project that provides a simple (usefull) helpers for data management.
 
 <br />
 
