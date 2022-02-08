@@ -108,7 +108,13 @@ $ python
 > Print only 2 lines
 
 ```python
->>> csv_print( input, 2 )   
+>>> from util import *
+>>> input = 'samples/data.csv'
+>>> 
+>>> csv_print( input ) # print all file
+>>> 
+csv_print( input, 2 )  # print header and first 2 lines
+... 
 product_code,product_info,value,currency,type
 Nike_Air,Nike Air More Uptempo,105,usd,transaction
 Nike_Club,Nike Club Joggers BB,55,usd,transaction
@@ -116,18 +122,18 @@ Nike_Club,Nike Club Joggers BB,55,usd,transaction
 
 <br />
 
-> Remove a column
+> Remove a column from the the `CSV` file
 
 ```python
->>> csv_col_remove( input, 'value' ) 
+>>> csv_col_remove( input, 'value' ) # `vaue` is the column name
 ```
 
 <br />
 
-> Add a column
+> Add a column to the `CSV` file
 
 ```python
->>> csv_col_add( input, 'value' )    
+>>> csv_col_add( input, 'value' ) # `vaue` is the column name   
 ```
 
 <br />
