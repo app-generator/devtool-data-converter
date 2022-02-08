@@ -2,6 +2,8 @@
 
 Open-Source that provides a simple API for data management.
 
+<br />
+
 > Features
 
 - CSV Files:
@@ -13,7 +15,7 @@ Open-Source that provides a simple API for data management.
 
 <br />
 
-The project comes with a simple `Flask` app that loads the information from `samples/data.csv` and injects the content into a simple data table. 
+The project is bundled with a simple `Flask` app that loads the information from `samples/data.csv` and presents the information using data tables.  
 
 <br />
 
