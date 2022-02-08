@@ -39,7 +39,7 @@ At this point, you should see your data nicely paginated.
 
 <br /> 
 
-## ✨ Full Set UP
+## ✨ Complete Set UP
 
 > Clone Sources (this repo)
 
