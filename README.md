@@ -12,7 +12,7 @@ Open-Source project that provides a simple (usefull) helpers for data management
   - Add New Column with random values:
     - `timestamp`, `random_int` and `random string` (via Faker)
   - `csv_to_json` Helper
-- Support via **Github** (issues tracker) and [Discord](https://discord.gg/fZC6hup).
+- [Support](https://appseed.us/support) via **Github** (issues tracker) and [Discord](https://discord.gg/fZC6hup).
  
 <br />
 
