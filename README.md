@@ -1,6 +1,6 @@
 # Data Converter 
 
-Open-Source project that provides a simple (usefull) helpers for data management.
+Open-Source project that provides a simple (usefull) helpers for data management - provided by [AppSeed](https://appseed.us/). 
 
 <br />
 
@@ -12,7 +12,8 @@ Open-Source project that provides a simple (usefull) helpers for data management
   - Add New Column with random values:
     - `timestamp`, `random_int` and `random string` (via Faker)
   - `csv_to_json` Helper
-
+- Support via **Github** (issues tracker) and [Discord](https://discord.gg/fZC6hup).
+ 
 <br />
 
 The project is bundled with a simple `Flask` app that loads the information from `samples/data.csv` and presents the information using data tables.  
