@@ -8,9 +8,9 @@ Open-Source that provides a simple API for data management.
 
 - CSV Files:
   - Print
-  - Column: Remove, Update
-  - New Column options:
-    - timestamp, random_int and random string (via Faker)
+  - Columns: Remove, Update
+  - Add New Column with random values:
+    - `timestamp`, `random_int` and `random string` (via Faker)
   - `csv_to_json` Helper
 
 <br />
