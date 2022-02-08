@@ -23,7 +23,8 @@ The project is bundled with a simple `Flask` app that loads the information from
 ## ✨ Quick Start
 
 - Clone the project
-- Install Python modules
+- Install Python modules:
+  - `pip install -r requirements.txt` 
 - Start the `Flask` app
   - The `http://localhost:5000/datatables/` route will display the contents of `samples/data.csv` using data tables.
 - Save your CSV content using the same file
@@ -54,7 +55,7 @@ $ cd devtool-data-converter
 ```bash
 $ virtualenv env
 $ source env/bin/activate
-$ pip3 install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 
 Or for **Windows-based Systems**
