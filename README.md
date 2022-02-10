@@ -1,6 +1,6 @@
 # Data Converter 
 
-`Open-Source` project that provides a simple (usefull) helpers for data management - provided by [AppSeed](https://appseed.us/). 
+`Open-Source` project that provides simple helpers for data management - provided by [AppSeed](https://appseed.us/). 
 
 <br />
 
@@ -23,7 +23,8 @@ The project is bundled with a simple `Flask` app that loads the information from
 ## ✨ Quick Start
 
 - Clone the project
-- Install Python modules
+- Install Python modules:
+  - `pip install -r requirements.txt` 
 - Start the `Flask` app
   - The `http://localhost:5000/datatables/` route will display the contents of `samples/data.csv` using data tables.
 - Save your CSV content using the same file
@@ -38,7 +39,7 @@ At this point, you should see your data nicely paginated.
 
 <br /> 
 
-## ✨ Full Set UP
+## ✨ Complete Set UP
 
 > Clone Sources (this repo)
 
@@ -54,7 +55,7 @@ $ cd devtool-data-converter
 ```bash
 $ virtualenv env
 $ source env/bin/activate
-$ pip3 install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 
 Or for **Windows-based Systems**
@@ -107,7 +108,13 @@ $ python
 > Print only 2 lines
 
 ```python
->>> csv_print( input, 2 )   
+>>> from util import *
+>>> input = 'samples/data.csv'
+>>> 
+>>> csv_print( input ) # print all file
+>>> 
+csv_print( input, 2 )  # print header and first 2 lines
+... 
 product_code,product_info,value,currency,type
 Nike_Air,Nike Air More Uptempo,105,usd,transaction
 Nike_Club,Nike Club Joggers BB,55,usd,transaction
@@ -115,18 +122,18 @@ Nike_Club,Nike Club Joggers BB,55,usd,transaction
 
 <br />
 
-> Remove a column
+> Remove a column from the the `CSV` file
 
 ```python
->>> csv_col_remove( input, 'value' ) 
+>>> csv_col_remove( input, 'value' ) # `vaue` is the column name
 ```
 
 <br />
 
-> Add a column
+> Add a column to the `CSV` file
 
 ```python
->>> csv_col_add( input, 'value' )    
+>>> csv_col_add( input, 'value' ) # `vaue` is the column name   
 ```
 
 <br />
