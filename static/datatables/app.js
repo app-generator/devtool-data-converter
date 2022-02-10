@@ -146,4 +146,19 @@ doc.addEventListener("DOMContentLoaded", function(event) {
     
     }, false); 
 
+    // handle on change     
+    document.addEventListener('change', function (event) {
+
+        // Cell Edit event
+        if (event.target.matches('.csv_file')) {
+
+            // Drop the default event
+            event.preventDefault();
+
+            // Reload the page using the new data set
+            window.location='/datatables/?input=' + event.target.value;
+        }
+    
+    }, false);     
+
 }); 

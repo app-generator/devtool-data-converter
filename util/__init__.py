@@ -270,13 +270,12 @@ def csv_col_add( aPath, aColName, aPattern='random_str' ):
 def csv_to_json( aPath ):
 
     csv_content = csv_load( aPath )
+    data = []
 
     if not csv_content:
 
         print( ' > Error Reading CSV File [' + aPath + ']' )
-        return None
-
-    data = []
+        return data
 
     header = next(csv_content)
 
@@ -300,7 +299,6 @@ def csv_to_json( aPath ):
         if field_dict:    
 
             data.append( field_dict )
-
     
     return data
        

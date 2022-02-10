@@ -1,7 +1,7 @@
 {
     "name": "devtool-data-converter",
     "mastertemplate": "devtool-data-converter",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Template project - Provided by AppSeed",
     "scripts": {},
     "repository": {

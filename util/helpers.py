@@ -4,7 +4,7 @@ Copyright (c) 2019 - present AppSeed.us
 License: MIT
 """
 
-import os, csv
+import os, csv, fnmatch, time, shutil
 
 '''
 This file should contain primitoves used in other modules
@@ -65,6 +65,14 @@ def file_read( aPath, as_list=False ):
     except:
         return None
 
+def file_rm ( aPath ):
+    if file_exists( aPath ):
+        os.remove( aPath )
+
+def file_cp ( aSrc, aDest ):
+    if file_exists( aSrc ):
+        shutil.copyfile(aSrc, aDest)
+
 def file_write( aPath, aContent, isAppend=False ): 
 
     try:
@@ -107,3 +115,31 @@ def list_write( aPath, aList, isAppend=False ):
         aContent += item + os.linesep
 
     return file_write( aPath, aContent, isAppend)
+
+def list_files(dir_to_scan, ext='html'):
+
+    matches = []
+
+    for root, dirnames, filenames in os.walk( dir_to_scan ):
+        for filename in fnmatch.filter(filenames, '*.'+ ext):
+
+            item = os.path.join(root, filename)
+
+            #print ' **** type(item) = ' + str( type ( item ) )
+            matches.append( item )
+
+    return matches
+
+def list_csv_files( aPath ):
+
+    return list_files( aPath, 'csv' )
+
+def get_tail( aPath ):
+    head, tail = os.path.split( aPath )
+    return tail
+
+def get_date(aFormat='%H_%M_%S'):
+    return time.strftime( aFormat, time.gmtime())
+
+def get_date_ms():
+    return time.strftime( '%M%S', time.gmtime())

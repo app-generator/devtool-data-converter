@@ -30,7 +30,27 @@
           <div class="mb-3 mb-lg-0">
               <h1 class="h4">Simple DataTables</h1>
               <p class="mb-0">
-                The information is loaded from a JSON file:<strong>app/static/datatables/data.json</strong>.
+                The information is loaded from <strong>samples\{{ input }}</strong>.
+                <br />
+                <br />
+                <label class="my-1 me-2" for="country">Available files</label>
+                <br />  
+                <select name="csv_file" id="csv_file" class="form-select csv_file">
+                    {% for f in csv_files %}
+                      <option value="{{ f }}" {% if f == input %} selected {% endif %} >{{ f }}</option>
+                    {% endfor %}
+                </select>
+
+                <br />  
+                <form method="post" enctype="multipart/form-data" accept=".csv">
+                  <label for="file">File to upload</label>
+                  <input type="file" id="file" name="file">
+
+                  <button>Upload</button>
+                </form>
+
+                <br />  
+                {{ msg }}
               </p> 
           </div>
           <div>
@@ -44,11 +64,21 @@
   </div>
 
   <div class="card border-0 shadow mb-4">
+
       <div class="card-body">
 
             <table id="api-datatable" class="table"></table>
 
       </div>
+      <div class="card-footer">
+
+        <button class="csv">Export CSV</button>
+        <button class="sql">Export SQL</button>
+        <button class="txt">Export TXT</button>
+        <button class="json">Export JSON</button>
+
+      </div>
+
   </div>
 
 {% endblock content %}
@@ -59,22 +89,63 @@
   <!-- CDN -->
   <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest"></script>
 
+  <!-- APP JS -->
+  <script src="/static/datatables/app.js"></script>
+
   <!-- Custom Code -->
   <script>
-  fetch('/api/from_csv')
+
+  var table;
+  
+  // Table provisioning  
+  fetch('/api/from_csv?input={{ input }}')
     .then(response => response.json())
     .then(data => {
       if (!data.length) {
         return
       }
 
-      let table = new simpleDatatables.DataTable("#api-datatable", {
+      table = new simpleDatatables.DataTable("#api-datatable", {
         data: {
           headings: Object.keys(data[0]),
           data: data.map(item => Object.values(item))
-        },
+        }
       })
     })
+
+    document.querySelector("button.csv").addEventListener("click", () => {
+        table.export({
+            type:"csv",
+            download: true,
+            lineDelimiter: "\n\n",
+            columnDelimiter: ";"
+        })
+    })    
+
+    document.querySelector("button.sql").addEventListener("click", () => {
+        table.export({
+            type:"sql",
+            download: true,
+            tableName: "export_table"
+        })
+    })
+
+    document.querySelector("button.txt").addEventListener("click", () => {
+        table.export({
+            type:"txt",
+            download: true,
+        })
+    })
+
+    document.querySelector("button.json").addEventListener("click", () => {
+        table.export({
+            type:"json",
+            download: true,
+            escapeHTML: true,
+            space: 3
+        })
+    })
+
   </script>
 
 {% endblock javascripts %}
