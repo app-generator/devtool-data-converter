@@ -1,6 +1,6 @@
 # Data Converter 
 
-`Open-Source` project that provides simple helpers for data management - provided by [AppSeed](https://appseed.us/). 
+This [developer tool](https://appseed.us/developer-tools/) provides simple helpers for data management - provided by [AppSeed](https://appseed.us/). 
 
 <br />
 
