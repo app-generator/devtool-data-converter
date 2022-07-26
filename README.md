@@ -2,6 +2,9 @@
 
 This [developer tool](https://appseed.us/developer-tools/) provides simple helpers for data management - provided by [AppSeed](https://appseed.us/). 
 
+- 👉 Free [support](https://appseed.us/support/) via Email and [Discord](https://discord.gg/fZC6hup)
+- 👉 More [Developer Tools](https://appseed.us/developer-tools/) - provided by AppSeed
+
 <br />
 
 > Features
